@@ -19,7 +19,7 @@ description: AI Native Camp Day 4 Wrap & Analyze. session-wrap 스킬을 직접 
 | **multi-agent** | 여러 에이전트가 동시에 일하는 패턴. "회의에서 각 팀장에게 동시에 보고 받기" |
 | **병렬(Parallel)** | 여러 작업을 동시에 처리하는 것. "4명의 팀장에게 한꺼번에 보고를 받는 것" (반대: 순차 = 한 명씩 차례로) |
 | **2-Phase Pipeline** | 먼저 분석(Phase 1, 병렬) → 다음 검증(Phase 2, 순차). "전문가 의견 수집 후 팀장이 중복 체크" |
-| **Task** | Claude가 다른 에이전트를 불러 일을 시키는 도구. Day 1 Block 3-4에서 배운 subagent |
+| **frontmatter** | 스킬 파일 맨 위에 `---`로 감싸서 적는 "이름표". 스킬의 이름(name)과 설명(description)을 여기에 적는다 |
 | **history-insight** | 과거 세션 기록을 분석해 인사이트를 추출하는 스킬 |
 | **session-analyzer** | 스킬이 의도대로 실행됐는지 검증하는 분석 도구 |
 | **플러그인(Plugin)** | 외부에서 설치한 스킬 모음. 스킬이 여러 개 묶여 있는 "스킬 패키지" |
@@ -121,7 +121,7 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 ## 블록 특수 규칙
 
 - **Block 0 (개념 이해)**: Phase A에서 multi-agent 개념 설명 + session-wrap 원본 구조 분석 안내 → Stop. Phase B에서 퀴즈.
-- **Block 1 (스킬 만들기)**: Phase A에서 SKILL.md를 Step-by-Step으로 작성하는 방법 안내 → 참가자가 직접 작성 → Stop. Phase B에서 작성한 스킬 구조 퀴즈.
+- **Block 1 (스킬 만들기)**: Phase A에서 SKILL.md를 Step-by-Step으로 작성하는 방법 안내 → 참가자가 직접 작성 → Stop. Phase B에서 작성한 스킬 구조 퀴즈. (가장 긴 블록 — 완료 후 "여기까지 잘 따라오셨습니다!" 격려)
 - **Block 2 (실행 & 검증)**: Phase A에서 만든 스킬 실행 + 결과 확인 안내 → Stop. Phase B에서 실행 결과 퀴즈.
 - **Block 3 (History Insight)**: Phase A에서 history-insight 스킬 소개 + 실행 안내 → Stop. Phase B에서 퀴즈.
 - **Block 4 (Session Analyzer)**: Phase A에서 session-analyzer 소개 + 실행 안내 → Stop. Phase B에서 종합 퀴즈 + 마무리.
@@ -185,11 +185,10 @@ AskUserQuestion({
     "question": "Day 4: Wrap & Analyze\n\n어디서부터 시작할까요?",
     "header": "시작 블록",
     "options": [
-      {"label": "처음부터 (Block 0)", "description": "Multi-agent 패턴과 session-wrap 개념부터"},
-      {"label": "스킬 만들기 (Block 1)", "description": "바로 session-wrap 스킬 작성하기"},
-      {"label": "실행 & 검증 (Block 2)", "description": "만든 스킬 실행 + 결과 확인"},
-      {"label": "History Insight (Block 3)", "description": "세션 히스토리 분석부터"},
-      {"label": "Session Analyzer (Block 4)", "description": "세션 실행 검증부터"}
+      {"label": "처음부터 (Block 0)", "description": "Multi-agent 패턴과 session-wrap 개념부터 차근차근"},
+      {"label": "스킬 만들기 (Block 1)", "description": "개념을 이미 알면 바로 스킬 작성하기"},
+      {"label": "실행 & 검증 (Block 2)", "description": "스킬을 이미 만들었으면 실행 + 결과 확인"},
+      {"label": "분석 도구 (Block 3~4)", "description": "history-insight와 session-analyzer 실습부터"}
     ],
     "multiSelect": false
   }]
