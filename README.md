@@ -1,26 +1,26 @@
-# AI Native Camp - 1기
+# Solo Act-preneur Incubation Bootcamp (beta)
 
-> 7일 후, 당신의 업무 방식은 영구적으로 바뀐다.
+> 7일 후, 당신의 창업 방식은 영구적으로 바뀐다.
 
-비개발자를 위한 Claude Code 7일 집중 캠프. 2026-02-14 ~ 2026-02-21 (일요일 휴식), Naver D2SF.
+비개발자를 위한 Claude Code 7일 솔로창업 부트캠프. 
 
 ## 설치
 
 ```bash
-npx skills add ai-native-camp/camp-1 --agent claude-code --yes
+npx skills add tonimoon7/solopreneur-incubation-program --agent claude-code --yes
 ```
 
 이 한 줄이면 모든 커리큘럼 스킬이 Claude Code에 설치됩니다. 특정 Day만 설치하려면:
 
 ```bash
 # Day 1만 설치
-npx skills add ai-native-camp/camp-1 --skill day1-onboarding --agent claude-code --yes
+npx skills add tonimoon7/solopreneur-incubation-program --skill day1-onboarding --agent claude-code --yes
 
 # Day 2만 설치
-npx skills add ai-native-camp/camp-1 --skill day2-create-context-sync-skill --agent claude-code --yes
+npx skills add tonimoon7/solopreneur-incubation-program --skill day2-create-context-sync-skill --agent claude-code --yes
 
 # Day 4만 설치
-npx skills add ai-native-camp/camp-1 --skill day4-wrap-and-analyze --agent claude-code --yes
+npx skills add tonimoon7/solopreneur-incubation-program --skill day4-wrap-and-analyze --agent claude-code --yes
 ```
 
 > 설치 후 Claude Code에서 `/day1-onboarding`, `/day2-create-context-sync-skill`, `/day4-wrap-and-analyze` 등으로 시작하세요.
